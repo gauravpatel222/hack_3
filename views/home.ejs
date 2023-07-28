@@ -1,0 +1,72 @@
+<%- include('./navbar') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+        .box{
+            display: flex;
+           
+           width:60vw;
+           align-items: center;
+           gap:50px;
+           margin:10px;
+           color: white;
+           
+           justify-content:space-between;
+            background-color: aqua;
+            font-size:small;
+        }
+        .box div{
+            
+        }
+        .box h1,p{
+            text-transform: uppercase;
+            text-align: left;
+            margin-left:2vh;
+        }
+        #Box{
+            
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+        }
+     .btn{
+            padding:10px;
+         background-color: red;
+         border-radius: 20px;
+         color:white;
+         text-decoration: none;
+         margin-right: 3vh;;
+        }
+        a{
+            text-decoration: none;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    
+
+<div id="Box">
+    <% for (let object of quotesprinted) { %>
+        <div class="box">
+            <div>
+                <h1><%= object.quote %></h1>
+                <p>~<%= object.name %></p>
+            </div>
+            <div style="display: flex;"><button class="btn"><a href="/show/<%=object._id%>">View</a></button>
+                <button class="btn"><a href="/delete/<%=object._id%>">Delete</a></button></div>
+        
+        </div>
+   <% } %>

@@ -1,0 +1,47 @@
+<%- include('./navbar') %>
+<style>
+    #custom-box {
+        background-color:aqua;
+        margin: 5vh auto;
+        padding: 40px;
+        width: 250px;
+        color: white;
+    }
+
+    #custom-box .custom-form div {
+        margin: 10px;
+    }
+
+    #custom-name {
+        height: 40px;
+    }
+
+    #custom-quote {
+        height: 80px;
+    }
+
+    #custom-box .custom-form #custom-btn {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="custom-box">
+        <form action="/" method="POST" class="custom-form">
+            <div id="custom-div1">
+                <div id="custom-name-text">Enter your name</div>
+                <input type="text" id="custom-name" name="name" placeholder="Enter name">
+            </div>
+
+            <div id="custom-div2">
+                <div id="custom-quote-text">Enter your quote</div>
+                <textarea type="text" id="custom-quote" name="quote" placeholder="Enter your quote"></textarea>
+            </div>
+
+            <button type="submit" id="custom-btn">Add Quote</button>
+        </form>
+    </div>
